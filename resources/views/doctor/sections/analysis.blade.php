@@ -14,7 +14,7 @@
 
             {{-- مدخلات التحليل --}}
             <div class="row">
-                @foreach(['ALT', 'AST', 'ALP', 'BIL', 'CHE', 'ALB', 'CHOL', 'CREA', 'GGT', 'PROT'] as $field)
+                @foreach([ 'Age','Sex','ALB','ALP','ALT', 'AST', 'BIL', 'CHE','CHOL', 'CREA', 'GGT', 'PROT'] as $field)
                     <div class="col-md-4 mb-3">
                         <label class="form-label">{{ $field }}</label>
                         <input type="number" step="any" class="form-control" name="{{ $field }}" required>

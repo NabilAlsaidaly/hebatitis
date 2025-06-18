@@ -11,9 +11,22 @@ class MedicalRecord extends Model
     protected $primaryKey = 'Record_ID';
 
     protected $fillable = [
-        'Patients_ID', 'ALT', 'AST', 'ALP', 'BIL',
-        'CHE', 'ALB', 'CHOL', 'CREA', 'GGT', 'PROT'
+        'Patients_ID',
+        'Doctor_ID',
+        'Age',
+        'Sex',
+        'ALT',
+        'AST',
+        'ALP',
+        'BIL',
+        'CHE',
+        'ALB',
+        'CHOL',
+        'CREA',
+        'GGT',
+        'PROT'
     ];
+
 
     public function patient(): BelongsTo
     {

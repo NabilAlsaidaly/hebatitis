@@ -6,7 +6,11 @@
 
         <div class="ms-auto">
             <span class="me-3 text-muted">مرحبًا دكتور</span>
-            <a href="#" class="btn btn-outline-danger btn-sm">تسجيل الخروج</a>
+            <form method="POST" action="{{ route('doctor.logout') }}" style="display: inline;">
+                @csrf
+                <button type="submit" class="btn btn-outline-danger btn-sm">🚪 تسجيل الخروج</button>
+            </form>
+
         </div>
     </div>
 </nav>

@@ -30,12 +30,14 @@ Route::post('/predict/lstm', [MLPredictionController::class, 'predictLSTM']);
 
 
 Route::get('/patients', [PatientController::class, 'list']);
-Route::post('/patients', [PatientController::class, 'store']);
+//Route::post('/patients', [PatientController::class, 'store']);
 
 Route::put('/patients/{id}', [PatientController::class, 'update']);
 Route::delete('/patients/{id}', [PatientController::class, 'destroy']);
 
-Route::post('/records', [MedicalRecordController::class, 'store']);
+// Route::post('/records', [MedicalRecordController::class, 'store']);
+
+
 Route::get('/preprocessing/{id}', [MedicalRecordController::class, 'preprocessing']);
 
 Route::get('/stats', [StatsController::class, 'overview']);
