@@ -8,36 +8,42 @@
         <div class="mb-3">
             <label for="pre_patient_id" class="form-label">اختر المريض</label>
             <select class="form-select" id="pre_patient_id">
-                {{-- تعبئة من JavaScript --}}
+                <option value="">-- اختر مريضًا --</option>
             </select>
         </div>
 
-        {{-- عرض التحاليل الأخيرة --}}
+        {{-- نتائج التحاليل --}}
         <div id="preprocessingContent" class="d-none">
-            <h6 class="mb-3">🩺 آخر التحاليل المدخلة:</h6>
+            <h6 class="mb-3">🩺 آخر التحاليل المسجلة:</h6>
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>التحليل</th>
                         <th>القيمة</th>
-                        <th>الملاحظات</th>
+                        <th>ملاحظات</th>
                     </tr>
                 </thead>
                 <tbody id="preTableBody">
-                    {{-- تعبئة من JavaScript --}}
+                    {{-- البيانات من JavaScript --}}
                 </tbody>
             </table>
 
             <div id="preWarnings" class="alert alert-warning d-none">
-                ⚠️ يوجد تحاليل تحتوي على قيم غير منطقية أو ناقصة
+                ⚠️ هناك قيم غير منطقية أو ناقصة يُرجى مراجعتها قبل الإرسال.
             </div>
 
             <div class="text-end">
                 <button class="btn btn-outline-primary" id="sendToAI">📡 إرسال إلى الذكاء الاصطناعي</button>
             </div>
+            <div id="aiResultBox" class="alert alert-info mt-4 d-none">
+                <h6 class="mb-2">🧠 نتائج التحليل بالذكاء الاصطناعي:</h6>
+                <p id="aiDiagnosis">🔍 التشخيص: <strong>...</strong></p>
+                <p id="aiTreatment">💊 العلاج المقترح: <strong>...</strong></p>
+            </div>
+
         </div>
 
-        {{-- رسالة لا يوجد تحاليل --}}
+        {{-- إن لم توجد تحاليل --}}
         <div id="noRecordsMessage" class="alert alert-secondary d-none">
             لا توجد تحاليل محفوظة لهذا المريض حتى الآن.
         </div>

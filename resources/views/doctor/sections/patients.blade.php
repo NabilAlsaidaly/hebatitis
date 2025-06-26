@@ -61,3 +61,40 @@
 
     </div>
 </div>
+
+<!-- 🔍 Modal عرض التفاصيل -->
+<div class="modal fade" id="patientDetailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">📋 تفاصيل المريض</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>👤 الاسم:</strong> <span id="detailName"></span></p>
+                <p><strong>🎂 تاريخ الميلاد:</strong> <span id="detailDOB"></span></p>
+
+                <table class="table table-bordered table-sm mt-4">
+                    <thead class="table-light">
+                        <tr>
+                            <th>🕒 التاريخ</th>
+                            <th>ALT</th>
+                            <th>AST</th>
+                            <th>BIL</th>
+                            <th>ALB</th>
+                            <th>CHOL</th>
+                            <th>التشخيص</th>
+                            <th>التنبؤ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsTableBody">
+                        <!-- سيملأ ديناميكيًا -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>

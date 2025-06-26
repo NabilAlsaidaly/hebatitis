@@ -11,6 +11,11 @@
         🧪 التحليل والتنبؤ
     </a>
 
+    <a href="#" class="list-group-item list-group-item-action" id="nav-lstm">
+        🧠 تطور المرض (LSTM)
+    </a>
+
+
     <a href="#" class="list-group-item list-group-item-action" id="nav-preprocessing">
         ⚙️ المعالجة المسبقة
     </a>

@@ -39,7 +39,6 @@
         <canvas id="lstmChart" height="160" class="mt-4"></canvas>
     </div>
 </div>
-<h1></h1>
 {{-- تضمين مكتبة Chart.js --}}
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

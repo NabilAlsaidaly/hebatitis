@@ -30,4 +30,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Patient::class, 'Doctor_ID');
     }
+
+    public function getAuthPassword()
+    {
+        return $this->Password;
+    }
 }

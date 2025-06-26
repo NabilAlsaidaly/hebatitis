@@ -46,4 +46,6 @@ class MLPredictionController extends Controller
             'lstm_result' => $result
         ]);
     }
+
+
 }

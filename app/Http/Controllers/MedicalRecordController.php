@@ -87,27 +87,30 @@ class MedicalRecordController extends Controller
     }
 
     // ⚙️ عرض آخر تحليل للمريض (للمعالجة المسبقة)
-    public function preprocessing($id)
-    {
-        $record = MedicalRecord::where('Patients_ID', $id)
-            ->latest()
-            ->first();
+public function preprocessing($id)
+{
+    $record = MedicalRecord::where('Patients_ID', $id)
+        ->latest()
+        ->first();
 
-        if (!$record) {
-            return response()->json(null, 204); // No Content
-        }
-
-        return response()->json([
-            'ALT' => $record->ALT,
-            'AST' => $record->AST,
-            'ALP' => $record->ALP,
-            'BIL' => $record->BIL,
-            'CHE' => $record->CHE,
-            'ALB' => $record->ALB,
-            'CHOL' => $record->CHOL,
-            'CREA' => $record->CREA,
-            'GGT' => $record->GGT,
-            'PROT' => $record->PROT,
-        ]);
+    if (!$record) {
+        return response()->json(null, 204); // لا يوجد محتوى
     }
+
+    return response()->json([
+        'Age' => $record->Age,
+        'Sex' => $record->Sex,
+        'ALB' => $record->ALB,
+        'ALP' => $record->ALP,
+        'ALT' => $record->ALT,
+        'AST' => $record->AST,
+        'BIL' => $record->BIL,
+        'CHE' => $record->CHE,
+        'CHOL' => $record->CHOL,
+        'CREA' => $record->CREA,
+        'GGT' => $record->GGT,
+        'PROT' => $record->PROT,
+    ]);
+}
+
 }

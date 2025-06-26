@@ -14,10 +14,17 @@
         @include('doctor.sections.patients')
     </div>
 
+    {{-- قسم تطور المرض --}}
+    <div id="section-lstm" class="section d-none">
+        @include('doctor.sections.lstm')
+    </div>
+
+
     {{-- قسم التحليل --}}
     <div id="section-analysis" class="section d-none">
         @include('doctor.sections.analysis')
     </div>
+
 
     {{-- قسم المعالجة المسبقة --}}
     <div id="section-preprocessing" class="section d-none">
